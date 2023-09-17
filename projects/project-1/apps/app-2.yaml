@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: 'app-2'
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: app-2
+  source:
+    path: '.'
+    repoURL: 'https://github.com/nkzk/example-argo-gitops-repo.git'
+    targetRevision: HEAD
+  project: 'project-1'
