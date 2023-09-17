@@ -8,6 +8,6 @@ spec:
     namespace: app-1
   source:
     path: '.'
-    repoURL: 'https://github.com/example-argo-gitops-repo'
+    repoURL: 'https://github.com/nkzk/example-argo-gitops-repo.git'
     targetRevision: HEAD
   project: 'project-1'
