@@ -8,7 +8,7 @@ spec:
     server: https://kubernetes.default.svc
     namespace: argocd
   source:
-    path: '.'
+    path: 'dev'
     repoURL: 'https://github.com/nkzk/example-argo-gitops-repo.git'
     targetRevision: HEAD
   project: 'default'
