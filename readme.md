@@ -1,7 +1,7 @@
 The ArgoCD app-of-app pattern involves defining an application (app) that deploys other apps.
 
 
-[](https://github.com/nkzk/example-argo-gitops-repo/blob/main/argo.gif)
+![](https://github.com/nkzk/example-argo-gitops-repo/blob/main/argo.gif)
 
 In the gif above, `.bootstrap/dev.yaml` creates an App that points to the `dev` directory in this repository.
 
