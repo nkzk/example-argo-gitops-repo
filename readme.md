@@ -5,16 +5,23 @@ The ArgoCD app-of-app pattern involves defining an application (app) that deploy
 
 ![](https://github.com/nkzk/example-argo-gitops-repo/blob/main/argo.gif)
 
-In the gif above, `.bootstrap/dev.yaml` creates an App that points to the `dev` directory in this repository.
 
-The `dev` directory in this repository contains the manifests for the desired ArgoCD Projects and Applications.
+In the GIF above, `.bootstrap/dev.yaml` creates an app configured with this repository URL and the "dev" directory as path:
 
-The `bootstrap` ArgoApp will make sure the ArgoProjects and Argoapps defined in `dev` exists when pressing `Sync`
+```
+    path: 'dev'
+    repoURL: 'https://github.com/nkzk/example-argo-gitops-repo.git'
+
+```
+
+The `dev` directory/path contains the manifests for the desired ArgoCD Projects and Applications.
 
 
+When pressing sync on the bootstrap-app, all the projects and applications defined in the `dev` directory will be created.
 
 
-The process of adding new applications could be further streamlined with a Backstage template.
+The process of adding new apps to this project could be further streamlined with a Backstage template.
+
 
 ## Running locally:
 
