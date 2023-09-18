@@ -7,7 +7,7 @@ BRIGHT=$(tput bold)
 COLOR=$BLUE
 STAR='\U1F31F'
 
-kind create cluster --name my-cluster --config ./kind-config.yaml
+kind create cluster --name my-cluster --config .local/kind-config.yaml
 
 printf "\n${STAR}${COLOR}installing nginx ingress controller...${NORMAL}\n"
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
@@ -34,6 +34,3 @@ printf "\nArgoCD now available at http://${argo_host:=localhost}$argo_path"
 printf "\nusername: ${BRIGHT}admin${NORMAL}"
 printf "\npassword: ${BRIGHT}$argo_password${NORMAL}"
 
-printf "\n\nNOTE:"
-printf "\nbootstrap argocd with:"
-printf "\n > kubectl apply -f argocd-bootstrapper.yaml"

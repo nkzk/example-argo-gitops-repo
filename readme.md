@@ -1,3 +1,5 @@
+## Intro 
+
 The ArgoCD app-of-app pattern involves defining an application (app) that deploys other apps.
 
 
@@ -13,3 +15,10 @@ The `bootstrap` ArgoApp will make sure the ArgoProjects and Argoapps defined in 
 
 
 The process of adding new applications could be further streamlined with a Backstage template.
+
+## Running locally:
+
+
+Run `./.local/install.sh` script to create local Kind-cluster and start argoCD
+
+Create bootstrap app with `kubectl apply -f .bootstrap/dev.yaml`
